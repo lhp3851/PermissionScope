@@ -11,7 +11,7 @@ import PermissionScope
 
 class ViewController: UIViewController {
     let singlePscope = PermissionScope()
-    let multiPscope = PermissionScope()
+    let multiPscope = PermissionScope.init(backgroundTapCancels: true)
     let noUIPscope = PermissionScope()
 
     override func viewDidLoad() {

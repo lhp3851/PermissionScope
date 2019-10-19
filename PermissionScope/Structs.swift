@@ -9,7 +9,7 @@
 import Foundation
 
 /// Permissions currently supportes by PermissionScope
-@objc public enum PermissionType: Int, CustomStringConvertible {
+public enum PermissionType: Int, CustomStringConvertible {
     case contacts, locationAlways, locationInUse, notifications, microphone, camera, photos, reminders, events, bluetooth, motion
     
     public var prettyDescription: String {
@@ -41,7 +41,7 @@ import Foundation
 }
 
 /// Possible statuses for a permission.
-@objc public enum PermissionStatus: Int, CustomStringConvertible {
+public enum PermissionStatus: Int, CustomStringConvertible {
     case authorized, unauthorized, unknown, disabled
     
     public var description: String {
@@ -55,7 +55,7 @@ import Foundation
 }
 
 /// Result for a permission status request.
-@objc public class PermissionResult: NSObject {
+public class PermissionResult: NSObject {
     public let type: PermissionType
     public let status: PermissionStatus
     
